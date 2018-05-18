@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -10,6 +11,22 @@ namespace TestSite.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
+        {
+            AsyncTest();
+            CodeContractTest();
+
+            return View();
+        }
+
+        private void CodeContractTest()
+        {
+            int x = 1;
+            int y = 20;
+            Contract.Requires(x > y, string.Format("{0} deberia ser mayor que {1}", x, y));
+            var result =  x / y;
+        }
+
+        private void AsyncTest()
         {
             string message = string.Empty;
 
@@ -24,8 +41,6 @@ namespace TestSite.Controllers
             Task.WaitAll(tasks);
 
             ViewBag.AsyncMessage = message;
-
-            return View();
         }
 
         public ActionResult About()

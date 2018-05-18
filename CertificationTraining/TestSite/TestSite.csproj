@@ -157,6 +157,7 @@
     <Compile Include="Controllers\AlumnoController.cs" />
     <Compile Include="Controllers\EscuelaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MobileController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -201,6 +202,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Mobile\Index.cshtml" />
+    <Content Include="Views\Mobile\Index.iPhone.cshtml" />
+    <Content Include="Views\Mobile\Index.WinP.cshtml" />
+    <Content Include="Views\Mobile\Index.Android.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
