@@ -28,7 +28,7 @@ namespace TestSite
             ModelBinders.Binders.Add(typeof(EscuelaTestBinderVM), new EscuelaVMModelBinder());
 
             //Configuramos DisplayModes
-            DisplayModeProvider.Instance.Modes.Insert(1, new DefaultDisplayMode("WinP")
+            DisplayModeProvider.Instance.Modes.Insert(1, new DefaultDisplayMode("w_phone_style")
             {
                 ContextCondition = (ctx => ctx.GetOverriddenUserAgent()
                 .IndexOf("Windows Phone OS", StringComparison.OrdinalIgnoreCase) > 0)
@@ -40,7 +40,7 @@ namespace TestSite
                 .IndexOf("iPhone", StringComparison.OrdinalIgnoreCase) > 0)
             });
 
-            DisplayModeProvider.Instance.Modes.Insert(1, new DefaultDisplayMode("Android")
+            DisplayModeProvider.Instance.Modes.Insert(1, new DefaultDisplayMode("android")
             {
                 ContextCondition = (ctx => ctx.GetOverriddenUserAgent()
                 .IndexOf("Android", StringComparison.OrdinalIgnoreCase) > 0)
